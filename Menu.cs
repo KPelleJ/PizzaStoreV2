@@ -8,12 +8,15 @@ namespace PizzaStoreV2
 {
     public class Menu
     {
-        private MenuDAL menuData;
+        private MenuDAL _menuData;
 
         public Menu() 
         { 
-            menuData = new MenuDAL();
+            _menuData = new MenuDAL();
         }
+
+        public MenuDAL MenuData 
+        { get { return _menuData; } }
 
     }
 }

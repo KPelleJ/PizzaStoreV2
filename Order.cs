@@ -22,6 +22,7 @@ namespace PizzaStoreV2
             _date = DateTime.Now;
             _id = _idCounter++;
             _totalPrice = 0;
+            
             foreach (MenuItem item in _itemSummary) 
             { 
                 _totalPrice += item.Price;
