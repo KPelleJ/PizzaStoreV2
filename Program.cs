@@ -6,9 +6,10 @@
         {
             
 
-            MenuController m = new MenuController();
+            //MenuController m = new MenuController();
+            Menu mm = new Menu();
 
-            foreach (MenuItem p in m.MenuData.MenuItems)
+            foreach (MenuItem p in mm.MenuCon.MenuData.MenuItems)
             {
                 if (p is Pizza)
                 {
@@ -19,7 +20,7 @@
 
                 }
             }
-            foreach (MenuItem p in m.MenuData.MenuItems)
+            foreach (MenuItem p in mm.MenuCon.MenuData.MenuItems)
             {
                 if (p is Beverage)
                 {
@@ -28,10 +29,10 @@
             }
             Console.WriteLine(" ");
 
-            m.CreatePizza(20, "pepperoni", "Tomat, ost og pepperoni");
-            m.CreateBeverage(89, "IKFK", "50cl", "sodavand");
+            mm.MenuCon.CreatePizza(20, "pepperoni", "Tomat, ost og pepperoni");
+            mm.MenuCon.CreateBeverage(89, "IKFK", "50cl", "sodavand");
 
-            foreach (MenuItem p in m.MenuData.MenuItems)
+            foreach (MenuItem p in mm.MenuCon.MenuData.MenuItems)
             {
                 if (p is Pizza)
                 {
@@ -42,7 +43,7 @@
 
                 }
             }
-            foreach (MenuItem p in m.MenuData.MenuItems)
+            foreach (MenuItem p in mm.MenuCon.MenuData.MenuItems)
             {
                 if (p is Beverage)
                 {
@@ -51,15 +52,15 @@
             }
             Console.WriteLine(" ");
 
-            Console.WriteLine(m.DeleteMenuItem("pepperoni"));
-            Console.WriteLine(m.DeleteMenuItem("pepperoni"));
-            Console.WriteLine(m.DeleteMenuItem("IKFK"));
-            Console.WriteLine(m.UpdateMenuItem("Calzone",90));
-            Console.WriteLine(m.UpdateMenuItem("colzone", 120));
+            Console.WriteLine(mm.MenuCon.DeleteMenuItem("pepperoni"));
+            Console.WriteLine(mm.MenuCon.DeleteMenuItem("pepperoni"));
+            Console.WriteLine(mm.MenuCon.DeleteMenuItem("IKFK"));
+            Console.WriteLine(mm.MenuCon.UpdateMenuItem("Calzone",90));
+            Console.WriteLine(mm.MenuCon.UpdateMenuItem("colzone", 120));
 
             Console.WriteLine(" ");
 
-            foreach (MenuItem p in m.MenuData.MenuItems)
+            foreach (MenuItem p in mm.MenuCon.MenuData.MenuItems)
             {
                 if (p is Pizza)
                 {
@@ -70,7 +71,7 @@
 
                 }
             }
-            foreach (MenuItem p in m.MenuData.MenuItems)
+            foreach (MenuItem p in mm.MenuCon.MenuData.MenuItems)
             {
                 if (p is Beverage)
                 {

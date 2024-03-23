@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PizzaStoreV2
 {
-    internal class MenuController
+    public class MenuController
     {
         private MenuDAL menuData;
         
