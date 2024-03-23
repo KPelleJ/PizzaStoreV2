@@ -18,7 +18,8 @@ namespace PizzaStoreV2
         }
 
         public double Price
-        { get { return _price; } }
+        { get { return _price; } set { _price = value; }}
+        
 
         public string Name
         { get { return _name; } }

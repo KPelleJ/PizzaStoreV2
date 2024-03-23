@@ -13,6 +13,7 @@ namespace PizzaStoreV2
         private int _number;
         private static int _numberCounter = 100;
         
+
         public Beverage(double price, string name, string size, string type) : base(price, name)
         {
             _number = _numberCounter++;
@@ -26,7 +27,9 @@ namespace PizzaStoreV2
         public string Size
         { get { return _size; } }
 
-        public int Number 
-        { get { return _number;} }
+        public int Number
+        { get { return _number; } }
+
+        
     }
 }
