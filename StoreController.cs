@@ -21,6 +21,18 @@ namespace PizzaStoreV2
             store = new Store(name, address, phonenr);
         }
 
+        public CustomerController CustomerAdmin 
+        { get { return customerAdmin; } }
+
+        public Menu MenuAdmin 
+        { get {  return menuAdmin; } }
+
+        public OrderDAL OrderData 
+        { get { return orderData; } }
+
+        public Store Store
+        { get { return store; } }
+
         public string ShowMenu()
         {
             string menu = "Dagens menu:\n";
@@ -45,7 +57,7 @@ namespace PizzaStoreV2
                 }
             }
 
-            menu += $"\nButiks info:\n{store.Name} - {store.PhoneNr} - {store.Address}";
+            menu += $"\nButiks info:\n{store.Name} - {store.PhoneNr} - {store.Address}\n";
             return menu;
         }
 
@@ -77,8 +89,8 @@ namespace PizzaStoreV2
 
                 }
             }
-
-            orderDetails += $"\n Kunde information:\n{customer.Name} - {customer.PhoneNr} - {customer.Address} - {customer.Email}";
+            orderDetails += $"Totalpris = {o.TotalPrice} ({o.SalesTaxS} moms)\n";
+            orderDetails += $"Kunde information:\n{customer.Name} - {customer.PhoneNr} - {customer.Address} - {customer.Email}\n";
 
             return orderDetails ;
         }

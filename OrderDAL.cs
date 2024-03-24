@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PizzaStoreV2
 {
-    internal class OrderDAL
+    public class OrderDAL
     {
         private List<Order> orders;
 
@@ -14,5 +14,8 @@ namespace PizzaStoreV2
         { 
             orders = new List<Order>();
         }
+
+        public List<Order> Orders
+        { get { return orders; } }
     }
 }

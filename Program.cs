@@ -79,9 +79,27 @@ namespace PizzaStoreV2
 
             Console.WriteLine(s.ShowMenu());
 
+            s.CustomerAdmin.CreateCustomer("Anna","plavej 12",22883377,"anna@email.com");
+            s.CustomerAdmin.CreateCustomer("Bent", "Golfvej 7", 87636268, "bent@email.com");
             List<MenuItem> o1 = new List<MenuItem>();
-            o1.Add()
+            o1.Add(s.MenuAdmin.MenuCon.MenuData.MenuItems[0]);
+            o1.Add(s.MenuAdmin.MenuCon.MenuData.MenuItems[3]);
+            o1.Add(s.MenuAdmin.MenuCon.MenuData.MenuItems[4]);
+            o1.Add(s.MenuAdmin.MenuCon.MenuData.MenuItems[7]);
 
+            List<MenuItem> o2 = new List<MenuItem>();
+            o2.Add(s.MenuAdmin.MenuCon.MenuData.MenuItems[1]);
+            o2.Add(s.MenuAdmin.MenuCon.MenuData.MenuItems[2]);
+            o2.Add(s.MenuAdmin.MenuCon.MenuData.MenuItems[3]);
+            o2.Add(s.MenuAdmin.MenuCon.MenuData.MenuItems[8]);
+            o2.Add(s.MenuAdmin.MenuCon.MenuData.MenuItems[6]);
+
+
+
+            Console.WriteLine(s.CreateOrder(o1, s.CustomerAdmin.CustomerData.Customers[0]));
+            Console.WriteLine(s.CreateOrder(o2, s.CustomerAdmin.CustomerData.Customers[1]));
+
+            Console.WriteLine(s.CustomerAdmin.CustomerList());
         }
 
         

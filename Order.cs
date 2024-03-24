@@ -48,6 +48,9 @@ namespace PizzaStoreV2
         public List<MenuItem> ItemSummary 
         { get {  return _itemSummary; } }
 
+        public string SalesTaxS
+        { get { return _salesTaxS; } }
+
 
 
     }
