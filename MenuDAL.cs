@@ -36,10 +36,10 @@ namespace PizzaStoreV2
             Pizza pizza5 = new Pizza(80, "Esotica", "Tomat, ost, skinke, reje og ananas");
             menuItems.Add(pizza5);
 
-            Beverage bev1 = new Beverage(25, "Coca Cola", "50cl", "sodavand");
+            Beverage bev1 = new Beverage(25, "Lille Coca Cola", "50cl", "sodavand");
             menuItems.Add(bev1);
 
-            Beverage bev2 = new Beverage(40, "Coca Cola", "1,5L", "sodavand");
+            Beverage bev2 = new Beverage(40, "Stor Coca Cola", "1,5L", "sodavand");
             menuItems.Add(bev2);
 
             Beverage bev3 = new Beverage(35, "Gulddame", "33cl", "øl");

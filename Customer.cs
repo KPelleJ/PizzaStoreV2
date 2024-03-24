@@ -25,16 +25,16 @@ namespace PizzaStoreV2
         }
 
         public string Name
-        { get { return _name; } }
+        { get { return _name; } set { _name = value; } }
 
         public string Address
-        { get { return _address; } }
+        { get { return _address; } set { _address = value; } }
 
         public int PhoneNr
-        { get { return _phoneNr; } }
+        { get { return _phoneNr; } set { _phoneNr = value; } }
 
         public string Email
-        { get { return _email; } }
+        { get { return _email; } set { _email = value; } }
 
         public int Id
         { get { return _id; } }

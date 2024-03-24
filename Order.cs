@@ -11,6 +11,8 @@ namespace PizzaStoreV2
         private int _id;
         private static int _idCounter = 1000;
         private double _totalPrice;
+        private double _salesTax = 1.25;
+        private string _salesTaxS = "25%";
         private Customer _customer;
         private DateTime _date;
         private List<MenuItem> _itemSummary;
@@ -27,6 +29,8 @@ namespace PizzaStoreV2
             { 
                 _totalPrice += item.Price;
             }
+
+            _totalPrice *= _salesTax;
         }
 
         public int Id
