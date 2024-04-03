@@ -24,7 +24,7 @@ namespace PizzaStoreV2
 
         public string CustomerList()
         {
-            string list = "";
+            string list = "\nKundeliste:\n";
 
             foreach (Customer c in customerData.Customers)
             {

@@ -89,10 +89,47 @@ namespace PizzaStoreV2
 
                 }
             }
-            orderDetails += $"Totalpris = {o.TotalPrice} ({o.SalesTaxS} moms)\n";
+            orderDetails += $"Totalpris = {o.TotalPrice}kr ({o.SalesTaxS} moms)\n";
             orderDetails += $"Kunde information:\n{customer.Name} - {customer.PhoneNr} - {customer.Address} - {customer.Email}\n";
+            orderDetails += $"Ordre tidspunkt: {o.Date}\n";
 
+            orderData.Orders.Add(o);
             return orderDetails ;
+        }
+
+        public string DeleteOrder(int orderId) 
+        {
+            int count = 0;
+            foreach (Order o in orderData.Orders)
+            {
+                if (orderId==o.Id)
+                {
+                    orderData.Orders.Remove(o);
+                    count++;
+                    return $"Ordren med ordre ID: {o.Id} er blevet slettet.";
+
+                }
+                
+            }
+            
+            if (count == 0)
+            {
+                return $"Ingen ordre med ordre ID: {orderId} blev fundet, prøv venligst igen.";
+            }
+
+            return "";
+        }
+
+        public string ShowOrders()
+        {
+            string ordersList = $"\nNuværende ordre i systemet:\n";
+
+            foreach (Order o in orderData.Orders)
+            {
+                ordersList += $"Ordre nummer: {o.Id} - Kunde Id: {o.Customer.Id} - Kunde navn: {o.Customer.Name} - Ordre tidspunkt: {o.Date}\n";
+            }
+
+            return ordersList;
         }
 
 

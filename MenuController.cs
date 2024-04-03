@@ -34,7 +34,7 @@ namespace PizzaStoreV2
 
             if (count > 0)
             {
-                throw new NameAlreadyExistException("Navnet findes allerede på menuen, prøv venligst et andet navn");
+                throw new NameAlreadyExistException($"{name} findes allerede på menuen, prøv venligst et andet navn");
             }
             else
             {
@@ -59,7 +59,7 @@ namespace PizzaStoreV2
 
             if (count > 0)
             {
-                throw new NameAlreadyExistException("Navnet findes allerede på menuen, prøv venligst et andet navn");
+                throw new NameAlreadyExistException($"{name} findes allerede på menuen, prøv venligst et andet navn");
             }
             else
             {
