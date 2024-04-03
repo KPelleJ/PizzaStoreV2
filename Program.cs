@@ -35,6 +35,8 @@ namespace PizzaStoreV2
                 Console.WriteLine(" ");
             }
 
+            Console.WriteLine(s.MenuAdmin.MenuCon.DeleteMenuItem("Capricciosa"));
+
             Console.WriteLine(s.ShowMenu());
 
             s.CustomerAdmin.CreateCustomer("Anna","plavej 12",22883377,"anna@email.com");
@@ -57,7 +59,7 @@ namespace PizzaStoreV2
             o2.Add(s.MenuAdmin.MenuCon.MenuData.MenuItems[6]);
 
 
-
+            //Ordre handlinger
             Console.WriteLine(s.CreateOrder(o1, s.CustomerAdmin.CustomerData.Customers[0]));
             Console.WriteLine(s.CreateOrder(o2, s.CustomerAdmin.CustomerData.Customers[1]));
 
@@ -71,9 +73,7 @@ namespace PizzaStoreV2
 
             Console.WriteLine(s.ShowMenu());
 
-
-
-
+            //Kunde handlinger
             Console.WriteLine(s.CustomerAdmin.DeleteCustomer(3));
             
             Console.WriteLine(s.CustomerAdmin.CustomerList());
